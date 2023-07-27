@@ -7,8 +7,6 @@ module.exports = {
       throw new Error("Field Cannot Be Empty!");
     } else if (fullname === undefined || fullname === "") {
       throw new Error("Field Cannot Be Empty!");
-    } else if (photo === undefined || photo === "") {
-      throw new Error("Field Cannot Be Empty!");
     }
     next();
   },

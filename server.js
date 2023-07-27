@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const FileUpload = require("express-fileupload");
 const router = require("./src/routers/router");
 
 const app = express();
@@ -10,8 +11,10 @@ app.use(
     credentials: true,
   })
 );
+app.use(FileUpload());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("src"));
 
 router(app);
 
